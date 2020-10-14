@@ -5,6 +5,10 @@ import HOC from './Components/HOCComponent'
 import CC from './Components/ClassComponent'
 import { firstReducer } from './redux';
 import { useDispatch, useSelector } from 'react-redux';
+import { Provider } from './CommonContext'
+import * as tests from './tests'
+
+tests.promises()
 
 
 function App() {
@@ -18,12 +22,12 @@ function App() {
     // console.log('testState', testState);
     // console.log('dispatch()', dispatch({type: 'TEST_TYPE', test: 2}));
 
-  return (
-    <div className="App">
-      { HOC(FunComponent, {name: 1, prop: 'Top Prop 1'}) }
-      { HOC (CC, {name: 2, sum, prop: 'Top Prop 2'}) }
-    </div>
-  );
+  return <Provider value={['commonContextNewValue']}>
+      <div className="App">
+        { HOC(FunComponent, {name: 1, prop: 'Top Prop 1'}) }
+        { HOC (CC, {name: 2, sum, prop: 'Top Prop 2'}) }
+      </div>
+    </Provider>
 }
 
 export default App;

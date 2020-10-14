@@ -1,10 +1,12 @@
 import React  from 'react';
 import PC  from './PureComponent.tsx';
+import commonContext from '../CommonContext'
 
 export default function FunComponent(props = {}) {
 
     const [count, changeCount] = React.useState(0)
     const [runned, setRunned] = React.useState(false)
+    const [commonContextVal] = React.useContext(commonContext)
 
     React.useEffect(() => {
         // console.log('runned', runned);
@@ -26,12 +28,13 @@ export default function FunComponent(props = {}) {
     }
 
     return <div>
-        <p>FunComponent</p>
-        <div>count: {count}</div>
-        <button onClick={run}>run</button>
-        <button onClick={() => changeCount(count + 100500)}>plus 100500</button>
-        <div>{props.prop}</div>
-        <div>{props.addProp}</div>
-        <PC>PureComponent prop from FunComponent</PC>
-    </div>
+                <p>FunComponent</p>
+                <div>count: {count}</div>
+                <button onClick={run}>run</button>
+                <button onClick={() => changeCount(count + 100500)}>plus 100500</button>
+                <div>{props.prop}</div>
+                <div>{props.addProp}</div>
+                <PC>PureComponent prop from FunComponent</PC>
+                <div>commonContext {commonContextVal}</div>
+            </div>
 }
