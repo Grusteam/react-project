@@ -1,0 +1,82 @@
+ScrenShots:
+
+1 немедленный вызов и Maximum update depth exceeded (infinite loop) нужно обернуть
+2 super(props) before accessing 'this'
+3 3 ошибки: 1 import React  from 'react' (React Must Be in Scope) | 2 строка  а не JSX | 3 this нет в Ф компоненте
+4 <div>0</div> надо !!
+5 Add key, писать статичное значение в контекст (норм), хранить JSX (норм)
+6 String Refs DEPRECATED | React.createRef()
+7 count always 0 | count => count + 1
+
+---
+
+1 Uncaught SyntaxError: Unexpected token ')' (add Parentheses)
+2 const unchangeble
+3 "object"
+4 undefined (add Parentheses around curly braces)
+5 catch1 then1RejectPurpose | then3 then1RejectPurpose | then4 then1RejectPurpose ||| "fulfilled" "then1RejectPurpose"
+
+
+Common:
+Кто зачем когда придумал ЖС
+Книги
+
+JS:
+ECMA-262 ECMAScript European Computer Manufacturers Association
+ECMAScript 2020 (11th Edition) BigInt ??
+Мысли о jQuery
+SPA
+Hoisting var const let (FE vs FD)
+lodash / underscore,  ramda
+Flanagan
+ECMA
+Фреймворки (различия)
+Тесты
+Тайпскрипт
+webpack (v5.1.0) | Babel | Import Export кто обеспечивает | npm\yarn
+Императивный Декларативный
+HTTP запрсы (методы, отличие GET POST)
+fetch axios
+Promises (async)
+DRY, DIE, KISS, SOLID, YAGNI
+CI/CD DevOps Docker
+SSR
+Event delegation (bubbling)
+
+React: (Facebook Jordan Walke 2013)
+Текущая версия 16.13.1
+Как поднять проект CRA (был ли опыт)
+Если поднять что будет в бандле (тесты)
+Фреймворк или библиотека
+>Hooks { FC only } 16.8 February 06, 2019 (state in FC) useState     useEffect(() => {}, [anyprop]) useRef | Stateless?
+Router (js history api)
+Component Types (FC CC | Pure (implements shouldComponentUpdate with a shallow prop and state comparison) | HOC) HOC over CC
+JSX (camelCase JS extention) | without React.createElement('div', null, `Hello ${this.props.toWhat}`)
+React.Fragment
+REF String Refs DEPRECATED (focus)
+Порталы
+Composition vs Inheritance
+Data flow = two-way data binding Children (props / Functions) propTypes defaultProps
+Controlled / Uncontrolled (internal state) (single source of truth) defaultValue <input type="file" /> is always an uncontrolled component
+dangerouslySetInnerHTML
+Как оценить производительность приложения (Profiler )
+
+
+Lifecycle ( с какого этапа можно менять state =componentWillMount)
+Deprecated:
+componentWillMount
+componentWillReceiveProps
+componentWillUpdate
+
+New:
+getDerivedStateFromProps
+
+Redux:
+Как встроить (Сможешь ли вручную)
+Структура
+Middleware Saga\Thunk
+Hooks useAction useSelector
+
+Верстка
+CSS
+Препроцессоры
