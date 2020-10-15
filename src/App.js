@@ -4,23 +4,23 @@ import FunComponent from './Components/FunComponent'
 import HOC from './Components/HOCComponent'
 import CC from './Components/ClassComponent'
 import { firstReducer } from './redux';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector, useStore } from 'react-redux';
 import { Provider } from './CommonContext'
 import * as tests from './tests'
+import { getUsers } from './firebase'
 
-tests.promises()
+getUsers.then(console.log)
+// tests.promises()
 
-
-function App() {
+function App(props) {
     function sum(a, b) {
         return a + b;
     }
 
     const dispatch = useDispatch()
     const testState = useSelector(state => state.test)
-
-    // console.log('testState', testState);
-    // console.log('dispatch()', dispatch({type: 'TEST_TYPE', test: 2}));
+    const { getState } = useStore()
+    const store = getState()
 
   return <Provider value={['commonContextNewValue']}>
       <div className="App">
